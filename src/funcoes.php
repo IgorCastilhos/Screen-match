@@ -1,5 +1,7 @@
 <?php
 
+namespace ScreenMatch\domain;
+
 function exibeMensagemLancamento(int $ano): void
 {
     if ($ano === 2024) {
@@ -14,15 +16,4 @@ function exibeMensagemLancamento(int $ano): void
 function incluidoNoPlano(bool $planoPrime, int $anoLancamento): bool
 {
     return $planoPrime || $anoLancamento < 2021;
-}
-
-function criaFilme(string $nome, int $anoLancamento, float $nota, string $genero): Filme
-{
-    $filme = new Filme();
-    $filme->setNome($nome);
-    $filme->setAnoLancamento($anoLancamento);
-    $filme->setMedia($nota);
-    $filme->setGenero($genero);
-
-    return $filme;
 }

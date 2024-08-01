@@ -1,5 +1,7 @@
 <?php
 
+namespace ScreenMatch\domain\entities;
+
 enum Genero
 {
     case ACAO;
