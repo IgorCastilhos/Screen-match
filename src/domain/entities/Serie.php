@@ -27,9 +27,11 @@ class Serie extends Titulo
     /**
      * @return int
      */
-    #[Override]
+    #[\Override]
     public function duracaoEmMinutos(): int
     {
-        return $this->temporadas * $this->episodiosPorTemporada * $this->minutosPorEpisodido;
+        return $this->temporadas * $this
+                ->episodiosPorTemporada * $this
+                ->minutosPorEpisodido;
     }
 }
